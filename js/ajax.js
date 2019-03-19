@@ -8,24 +8,26 @@ $(document).ready(function() {
 		$('.error-text').removeClass('d-inline-block');
 
 		if ($('#range').val() !== '' && $('#name').val() !== '') {
-			req.rating = $('#range').val();
-			req.userName = $('#name').val();
 
-			if ($('#teleg').val() !== '') { 
-				req.telegram = $('#teleg').val();
-			} else emptyContact++;
-			if ($('#email').val() !== '') { 
-				req.email = $('#email').val();
-			}else emptyContact++;
-			if ($('#tel').val() !== '') { 
-				req.tel = $('#tel').val();
-			}else emptyContact++;
+			if ($('#teleg').val() == '') { 
+				emptyContact++;
+			} 
+			if ($('#email').val() == '') { 
+				emptyContact++;
+			} else if (isValidEmail($('#email').val()) == false){
+				return false;
+			}
+			if ($('#tel').val() == '') {
+				emptyContact++; 
+			} else if (isValidPhone($('#tel').val()) == false){
+				return false;
+			}
 
 			if (emptyContact == 3) {
 				error = true;
 				$('.error-text').addClass('d-inline-block');
 			}
-		} else{
+		} else {
 			error = true;
 			return false;
 		}
@@ -35,7 +37,7 @@ $(document).ready(function() {
 			   	type: 'POST', 
 			   	url: 'handler.php', 
 			   	dataType: 'json', 
-			   	data: req, 
+			   	data: form.serialize(), 
 		       	beforeSend: function(data) {
 		            form.find('input[type="submit"]').attr('disabled', 'disabled');
 		        },
@@ -59,4 +61,14 @@ $(document).ready(function() {
 
 		return false;
 	});
+
+	function isValidEmail(emailAddress) {
+        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        return pattern.test(emailAddress);
+    }
+    function isValidPhone(phoneNumber) {
+    	var pattern = new RegExp(/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/);
+        return pattern.test(phoneNumber);
+    }
+
 });
