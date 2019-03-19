@@ -1,0 +1,53 @@
+.form-box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 25px;
+	border: 2px solid;
+}
+.form-title{
+	font-size: 35px;
+	display: inline-block;
+}
+form{
+	margin: 20px 0;
+}
+.form-box .custom-range::-moz-range-track{
+	border-radius: 0;
+	background-color: #000;
+	height: 2px; 
+}
+.form-box .custom-range::-moz-range-thumb{
+	background-color: #2ec2a8;
+}
+output{
+	margin: 0;
+	font-size: 18px;
+	font-weight: bold;
+}
+.in-form-title{
+	font-size: 25px;
+}
+.inputs{
+	margin-top: 20px;
+}
+.inputs input{
+	border: 2px solid #000;
+	border-radius: 0;
+}
+.inputs .form-control:focus{
+	border-color: #000;
+	box-shadow: none;
+}
+.was-validated .inputs .form-control:valid{
+	border-color: #000;
+}
+.was-validated .inputs .form-control:valid:focus{
+	border-color: #000;
+	box-shadow: none;
+}
+.error-text{
+	color: #dc3545;
+	display: none;
+}

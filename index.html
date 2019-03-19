@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mad Fish</title>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/reset.css">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="./css/bootstrap.css">
+
+</head>
+<body>
+
+	<div class="form-box">
+		<span class="form-title">Оцените нас, пожалуйста:</span>
+		<form novalidate class="text-center needs-validation d-flex flex-column" id="review-form" method="post">
+			<div class="form-group d-flex align-items-center flex-column mt-4">
+				<input type="range" class="custom-range" min="1" max="10" id="range" value="10" required>
+				<output for="range" onforminput="value = foo.valueAsNumber;"></output>
+			</div>
+			<span class="in-form-title">Оставьте свои контакты:</span>
+			<div class="row inputs">
+				<div class="input-group col-lg-6">
+				  	<input type="text" id="name" class="form-control" placeholder="Имя" required>
+				</div>
+				<div class="input-group col-lg-6">
+				  	<input type="text" id="teleg" class="form-control" placeholder="Telegram">
+				</div>
+			</div>
+			<div class="row inputs">
+				<div class="input-group col-lg-6">
+				  	<input type="email" id="email" class="form-control" placeholder="E-mail">
+				</div>
+				<div class="input-group col-lg-6">
+				  	<input type="text" id="tel" class="form-control" placeholder="Телефон">
+				</div>
+			</div>
+			<span class="error-text">Укажите хотя бы один контакт</span>
+			<button type="submit" class="btn mt-3">Отправить</button>
+		</form>
+	</div>
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/script.js"></script>
+	<script src="./js/ajax.js"></script>
+</body>
+</html>
