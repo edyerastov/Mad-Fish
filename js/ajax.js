@@ -3,11 +3,10 @@ $(document).ready(function() {
 		var form = $(this);
 		var error = false;
 		var emptyContact = 0;
-		var req = {};
 
 		$('.error-text').removeClass('d-inline-block');
 
-		if ($('#range').val() !== '' && $('#name').val() !== '') {
+		if ($("input:radio:checked").length !== 0 && $('#name').val() !== '') {
 
 			if ($('#teleg').val() == '') { 
 				emptyContact++;
@@ -25,9 +24,10 @@ $(document).ready(function() {
 
 			if (emptyContact == 3) {
 				error = true;
-				$('.error-text').addClass('d-inline-block');
+				$('.error-text.contacts').addClass('d-inline-block');
 			}
 		} else {
+			$('.error-text.radio').addClass('d-inline-block');
 			error = true;
 			return false;
 		}
@@ -37,7 +37,7 @@ $(document).ready(function() {
 			   	type: 'POST', 
 			   	url: 'handler.php', 
 			   	dataType: 'json', 
-			   	data: form.serialize(), 
+			   	data: form.serializeArray(), 
 		       	beforeSend: function(data) {
 		            form.find('input[type="submit"]').attr('disabled', 'disabled');
 		        },
