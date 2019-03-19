@@ -57,10 +57,6 @@ $(document).ready(function() {
 			});
 		}		
 
-		console.log(req);
-		console.log(emptyContact);
-		console.log(error);
-
 		return false;
 	});
 });
