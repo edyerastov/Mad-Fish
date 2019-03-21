@@ -15,8 +15,16 @@
 <body>
 
 	<div class="form-box">
-		<span class="form-title">Оцените нас, пожалуйста:</span>
 		<form novalidate class="text-center needs-validation d-flex flex-column" id="review-form" method="post">
+			<span class="form-title">Здравствуйте!</span>
+			<div class="inputs mb-3">
+				<div class="input-group d-flex flex-column text-left">
+					<label for="name">Как к вам обратиться?</label>
+				  	<input type="text" id="name" name="name" class="form-control w-100" placeholder="Имя" required>
+				</div>
+			</div>
+			<span class="in-form-title">Оцените нас, пожалуйста:</span>
+		
 			<ul class="radio-list d-flex justify-content-between mt-4">
 				<li class="form-check d-flex flex-column align-items-center">
 				  <input class="form-check-input" type="radio" name="radio" id="radio1" value="1">
@@ -60,11 +68,8 @@
 				</li>
 			</ul>
 			<span class="error-text radio">Укажите оценку</span>
-			<span class="in-form-title">Оставьте свои контакты:</span>
+			<span class="in-form-title">Оставьте ваш контакт:</span>
 			<div class="inputs">
-				<div class="input-group">
-				  	<input type="text" id="name" name="name" class="form-control" placeholder="Имя" required>
-				</div>
 				<div class="input-group">
 				  	<input type="text" id="teleg" name="telegram" class="form-control" placeholder="Telegram">
 				</div>
@@ -79,6 +84,7 @@
 			</div>
 			<span class="error-text contacts">Укажите хотя бы один контакт</span>
 			<button type="submit" class="btn mt-4">Отправить</button>
+			<span class="thank-you mt-3">Спасибо!</span>
 		</form>
 	</div>
 

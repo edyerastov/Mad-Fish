@@ -1,7 +1,7 @@
 // Fonts
 @font-face {
   font-family: "Gost";
-  src: url("../fonts/gost-type-b.ttf");
+  src: url("../fonts/gost-type-au.ttf");
 }
 
 body{
@@ -50,6 +50,7 @@ textarea{
 button{
   background-color: initial;
   border: none;
+  line-height: 1.55!important;
 }
 button:focus{
   outline: none;

@@ -46,17 +46,19 @@ $(document).ready(function() {
 		        },
 		       	success: function(data){ 
 		       		if (data['error']) { 
-		       			alert(data['error']); 
-		       		} else { 
-		       			alert('Спасибо, что оценили нас!');
+		       			console.log(data['error']); 
+		       		} else {
+		       			$('.thank-you').addClass('d-inline-block');
 		       		}
 		        },
 		       	error: function (xhr, ajaxOptions, thrownError) { 
-		            alert(xhr.status); 
-		            alert(thrownError);
+		            console.log(xhr.status); 
+		            console.log(thrownError);
 		        },
 		       	complete: function(data) { 
-		        	form.find('input[type="submit"]').prop('disabled', false); 
+		        	form.find('input[type="submit"]').prop('disabled', false);
+		        	$('#review-form').removeClass('was-validated');
+		        	$("input").val(''); 
 		        }
 		                  
 			});
