@@ -26,8 +26,11 @@ $(document).ready(function() {
 				error = true;
 				$('.error-text.contacts').addClass('d-inline-block');
 			}
-		} else {
+		} else if ($("input:radio:checked").length == 0) {
 			$('.error-text.radio').addClass('d-inline-block');
+			error = true;
+			return false;
+		} else {
 			error = true;
 			return false;
 		}

@@ -82,38 +82,7 @@ button:focus{
   background-color: #2ec2a8;
 }
 
-.form-check-input{
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-.form-check-input + label{
-  position: relative;
-  cursor: pointer;
-  font-weight: bold;
-}
-.form-check-input + label:before{
-  content: '';
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border: 2px solid #2ec2a8;
-  border-radius: 50%;
-  top: -20px;
-  left: -5px;
-}
-.form-check-input + label:after{
-  content: '';
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border: 6px solid #2ec2a8;
-  border-radius: 50%;
-  opacity: 0;
-  transition: .2s;
-  top: -20px;
-  left: -5px;
-}
+
 .form-check-input + label[for="radio10"]:before{
   left: -2px;
 }

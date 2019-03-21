@@ -29,8 +29,14 @@ output{
 .in-form-title{
 	font-size: 25px;
 }
-.inputs{
-	margin-top: 20px;
+.inputs .input-group:first-child{
+	margin: 20px 0 25px 0;
+}
+.else{
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 5px 0;
 }
 .inputs input{
 	border: 2px solid #000;
@@ -60,4 +66,35 @@ output{
 .error-text{
 	color: #dc3545;
 	display: none;
+}
+
+.form-check-input{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.form-check-input + label{
+  	position: relative;
+  	cursor: pointer;
+  	font-weight: bold;
+}
+.form-check-input + label:before{
+  	content: '';
+  	position: absolute;
+  	width: 22px;
+  	height: 22px;
+  	border: 2px solid #2ec2a8;
+  	top: -20px;
+  	left: -6px;
+}
+.form-check-input + label:after{
+  	content: '';
+  	position: absolute;
+  	width: 22px;
+  	height: 22px;
+  	border: 6px solid #2ec2a8;
+  	opacity: 0;
+  	transition: .2s;
+  	top: -20px;
+  	left: -6px;
 }
