@@ -1,5 +1,15 @@
+@font-face {
+  font-family: 'Gost';
+  src: url('../fonts/gost_type_bu.eot');
+  src: url('../fonts/gost_type_bu.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/gost_type_bu.woff2') format('woff2'),
+  url('../fonts/gost_type_bu.woff') format('woff'),
+  url('../fonts/gost_type_bu.ttf') format('truetype'),
+  url('../fonts/gost_type_bu.svg#gost_type_bu') format('svg');
+}
 .form-container{
 	padding: 20px;
+	font-family: 'Gost';
 }
 .form-box{
 	position: absolute;
@@ -8,6 +18,7 @@
 	transform: translate(-50%, -50%);
 	padding: 25px;
 	border: 2px dashed;
+	border-image: url(../img/border.png) 1 round;
 	min-width: 450px;
 }
 .form-title{
