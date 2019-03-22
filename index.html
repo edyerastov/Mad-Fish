@@ -11,82 +11,86 @@
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="./css/bootstrap.css">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
-
-	<div class="form-box">
-		<form novalidate class="text-center needs-validation d-flex flex-column" id="review-form" method="post">
-			<span class="form-title">Здравствуйте!</span>
-			<div class="inputs mb-3">
-				<div class="input-group d-flex flex-column text-left">
-					<label for="name">Как к вам обратиться?</label>
-				  	<input type="text" id="name" name="name" class="form-control w-100" placeholder="Имя" required>
+	<div class="form-container">
+		<div class="form-box">
+			<form novalidate class="text-center needs-validation d-flex flex-column" id="review-form" method="post">
+				<span class="form-title">Здравствуйте!</span>
+				<div class="inputs mb-3">
+					<div class="input-group d-flex flex-column text-left">
+						<label for="name">Как к вам обратиться?</label>
+					  	<input type="text" id="name" name="name" class="form-control w-100" placeholder="Имя" required>
+					</div>
 				</div>
-			</div>
-			<span class="in-form-title">Оцените нас, пожалуйста:</span>
-		
-			<ul class="radio-list d-flex justify-content-between mt-4">
-				<li class="form-check d-flex flex-column align-items-center">
-				  <input class="form-check-input" type="radio" name="radio" id="radio1" value="1">
-				  <label class="form-check-label" for="radio1">1</label>
-				</li>
-				<li class="form-check d-flex flex-column align-items-center">
-				  <input class="form-check-input" type="radio" name="radio" id="radio2" value="2">
-				  <label class="form-check-label" for="radio2">2</label>
-				</li>
-				<li class="form-check d-flex flex-column align-items-center">
-				  <input class="form-check-input" type="radio" name="radio" id="radio3" value="3">
-				  <label class="form-check-label" for="radio3">3</label>
-				</li>
-				<li class="form-check d-flex flex-column align-items-center">
-				  <input class="form-check-input" type="radio" name="radio" id="radio4" value="4">
-				  <label class="form-check-label" for="radio4">4</label>
-				</li>
-				<li class="form-check d-flex flex-column align-items-center">
-				  <input class="form-check-input" type="radio" name="radio" id="radio5" value="5">
-				  <label class="form-check-label" for="radio5">5</label>
-				</li>
-				<li class="form-check d-flex flex-column align-items-center">
-				  <input class="form-check-input" type="radio" name="radio" id="radio6" value="6">
-				  <label class="form-check-label" for="radio6">6</label>
-				</li>
-				<li class="form-check d-flex flex-column align-items-center">
-				  <input class="form-check-input" type="radio" name="radio" id="radio7" value="7">
-				  <label class="form-check-label" for="radio7">7</label>
-				</li>
-				<li class="form-check d-flex flex-column align-items-center">
-				  <input class="form-check-input" type="radio" name="radio" id="radio8" value="8">
-				  <label class="form-check-label" for="radio8">8</label>
-				</li>
-				<li class="form-check d-flex flex-column align-items-center">
-				  <input class="form-check-input" type="radio" name="radio" id="radio9" value="9">
-				  <label class="form-check-label" for="radio9">9</label>
-				</li>
-				<li class="form-check d-flex flex-column align-items-center">
-				  <input class="form-check-input" type="radio" name="radio" id="radio10" value="10">
-				  <label class="form-check-label" for="radio10">10</label>
-				</li>
-			</ul>
-			<span class="error-text radio">Укажите оценку</span>
-			<span class="in-form-title">Оставьте ваш контакт:</span>
-			<div class="inputs">
-				<div class="input-group">
-				  	<input type="text" id="teleg" name="telegram" class="form-control" placeholder="Telegram">
+				<span class="in-form-title">Оцените нас, пожалуйста:</span>
+			
+				<ul class="radio-list d-flex justify-content-between mt-4">
+					<li class="form-check d-flex flex-column align-items-center">
+					  <input class="form-check-input" type="radio" name="radio" id="radio1" value="1">
+					  <label class="form-check-label" for="radio1">1</label>
+					</li>
+					<li class="form-check d-flex flex-column align-items-center">
+					  <input class="form-check-input" type="radio" name="radio" id="radio2" value="2">
+					  <label class="form-check-label" for="radio2">2</label>
+					</li>
+					<li class="form-check d-flex flex-column align-items-center">
+					  <input class="form-check-input" type="radio" name="radio" id="radio3" value="3">
+					  <label class="form-check-label" for="radio3">3</label>
+					</li>
+					<li class="form-check d-flex flex-column align-items-center">
+					  <input class="form-check-input" type="radio" name="radio" id="radio4" value="4">
+					  <label class="form-check-label" for="radio4">4</label>
+					</li>
+					<li class="form-check d-flex flex-column align-items-center">
+					  <input class="form-check-input" type="radio" name="radio" id="radio5" value="5">
+					  <label class="form-check-label" for="radio5">5</label>
+					</li>
+					<li class="form-check d-flex flex-column align-items-center">
+					  <input class="form-check-input" type="radio" name="radio" id="radio6" value="6">
+					  <label class="form-check-label" for="radio6">6</label>
+					</li>
+					<li class="form-check d-flex flex-column align-items-center">
+					  <input class="form-check-input" type="radio" name="radio" id="radio7" value="7">
+					  <label class="form-check-label" for="radio7">7</label>
+					</li>
+					<li class="form-check d-flex flex-column align-items-center">
+					  <input class="form-check-input" type="radio" name="radio" id="radio8" value="8">
+					  <label class="form-check-label" for="radio8">8</label>
+					</li>
+					<li class="form-check d-flex flex-column align-items-center">
+					  <input class="form-check-input" type="radio" name="radio" id="radio9" value="9">
+					  <label class="form-check-label" for="radio9">9</label>
+					</li>
+					<li class="form-check d-flex flex-column align-items-center">
+					  <input class="form-check-input" type="radio" name="radio" id="radio10" value="10">
+					  <label class="form-check-label" for="radio10">10</label>
+					</li>
+				</ul>
+				<span class="error-text radio">Укажите оценку</span>
+				<span class="in-form-title">Оставьте ваш контакт:</span>
+				<div class="inputs">
+					<div class="input-group">
+					  	<input type="text" id="teleg" name="telegram" class="form-control" placeholder="Telegram">
+					</div>
+					<span class="else">или</span>
+					<div class="input-group">
+					  	<input type="email" id="email" name="email" class="form-control" placeholder="E-mail">
+					</div>
+					<span class="else">или</span>
+					<div class="input-group">
+					  	<input type="text" id="tel" name="tel" pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$" class="form-control" placeholder="Телефон">
+					</div>
 				</div>
-				<span class="else">или</span>
-				<div class="input-group">
-				  	<input type="email" id="email" name="email" class="form-control" placeholder="E-mail">
-				</div>
-				<span class="else">или</span>
-				<div class="input-group">
-				  	<input type="text" id="tel" name="tel" pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$" class="form-control" placeholder="Телефон">
-				</div>
-			</div>
-			<span class="error-text contacts">Укажите хотя бы один контакт</span>
-			<button type="submit" class="btn mt-4">Отправить</button>
-			<span class="thank-you mt-3">Спасибо!</span>
-		</form>
+				<span class="error-text contacts">Укажите хотя бы один контакт</span>
+				<button type="submit" class="btn mt-4">Отправить</button>
+				<span class="thank-you mt-3">Спасибо!</span>
+			</form>
+		</div>
 	</div>
+	
 
 	<script src="./js/jquery.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
